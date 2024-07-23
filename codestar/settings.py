@@ -11,6 +11,11 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 """
 
 from pathlib import Path
+import os
+import dj_database_url
+if os.path.isfile('env.py'):
+    import env
+
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -23,7 +28,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-so82@#@3a#=42c=#j^9fwb77-76jjvb(@9e5aot53z=_vf%)0i'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['8000-juanchitopi-djuangoblog-n9fsvro8o2f.ws.codeinstitute-ide.net', '.herokuapp.com'
 ]
@@ -82,7 +87,9 @@ DATABASES = {
     }
 }
 
-
+DATABASES = {
+    'default': dj_database_url.parse(os.environ.get("DATABASE_URL", "postgres://uab6bt6inzc:Jkcz5QsG4SmF@ep-gentle-mountain-a23bxz6h.eu-central-1.aws.neon.tech/repay_vixen_vapor_36283"))
+}
 # Password validation
 # https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators
 
