@@ -90,7 +90,7 @@ DATABASES = {
 }
 
 DATABASES = {
-    'default': dj_database_url.parse(os.environ.get("DATABASE_URL", "postgres://uab6bt6inzc:Jkcz5QsG4SmF@ep-gentle-mountain-a23bxz6h.eu-central-1.aws.neon.tech/repay_vixen_vapor_36283"))
+    'default': dj_database_url.parse(os.environ.get("DATABASE_URL"))
     
 
 }
