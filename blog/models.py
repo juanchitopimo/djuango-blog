@@ -17,6 +17,8 @@ class Post(models.Model):
     excerpt = models.TextField(blank=True)
     updated_on  = models.DateTimeField(auto_now=True)
 
+# Add methods to the Post model
+
     class Meta:
         ordering = ["-created_on"]
 
@@ -32,6 +34,7 @@ class Comment(models.Model):
     approved = models.BooleanField(default=False)
     created_on = models.DateTimeField(auto_now_add=True)
 
+# Add methods to the Comment model
     class Meta:
         ordering = ["created_on"]
 
