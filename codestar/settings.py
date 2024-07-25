@@ -30,7 +30,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 DEBUG = True
 
 ALLOWED_HOSTS = [
-    "8000-ajgreaves-blog-lesson-pl-lfv6kgfdws.us2.codeanyapp.com",
+    '8000-juanchitopi-djuangoblog-n9fsvro8o2f.ws.codeinstitute-ide.net', 
     ".herokuapp.com"
 ]
 
@@ -93,7 +93,7 @@ DATABASES = {
 }
 
 CSRF_TRUSTED_ORIGINS = [
-    "https://8000-ajgreaves-blog-lesson-pl-lfv6kgfdws.us2.codeanyapp.com",
+    'https://*.codeinstitute-ide.net',
     "https://*.herokuapp.com"
 ]
 
